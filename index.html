@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulelah Alankari</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #343a40;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            color: #fff !important;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            color: #fff !important;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .jumbotron {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px;
+            margin-bottom: 0;
+        }
+        .jumbotron h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .jumbotron p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .section {
+            padding: 20px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s;
+        }
+        .section:hover {
+            background-color: #fafafa;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .section h2:hover {
+            color: #007bff;
+        }
+        .section-content {
+            display: none;
+            font-size: 1rem; /* Smaller font size */
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+            /* max-height: 0; */
+            overflow: hidden;
+            transition: height 0.5s ease-out;
+            padding: 10px; /* Smaller padding */
+            height: 0;
+        }
+        .section-content.active {
+            display: block;
+            /* max-height: 1000px; */
+            height: auto;
+            transition: height 0.5s ease-in;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 20px;
+        }
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #007bff;
+            border-radius: 50%;
+            left: -30px; /* Adjusted to align in the left middle */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        .timeline-line {
+            position: absolute;
+            width: 2px;
+            background-color: #007bff;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin-left: 4px;
+            z-index: 1;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 50px;
+        }
+        .timeline-content {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+        }
+        .timeline-content a {
+            text-decoration: none;
+            color: var(--bs-secondary-color)!important;
+            font-size: 1.2rem;
+        }
+        .timeline-content a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ccc;
+            text-align: center;
+            padding: 5px 0;
+        }
+        footer p {
+            margin: 0; /* Remove default margin */
+            line-height: 50px; /* Center text vertically */
+            font-size: 0.9rem; /* Adjusted font size */
+        }
+
+        @media (max-width: 768px) {
+        .section h2 {
+            font-size: 2rem; /* Adjusted font size for smaller screens */
+            }
+        .section h4 {
+            font-size: 1rem; /* Adjusted font size for smaller screens */
+            }
+        .section a {
+            font-size: 0.8rem; /* Adjusted font size for smaller screens */
+        }
+        .section-content {
+            font-size: 0.6rem; /* Adjusted font size for smaller screens */
+        }
+        footer p {
+                font-size: 0.7rem; /* Adjusted font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Abdulelah Alankari</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Brief</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bachelor">Academic Study</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="jumbotron" id="home">
+        <div class="container">
+            <h1>Welcome</h1>
+            <p>Discover my journey as an IT professional.</p>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2>Brief</h2>
+            <div class="section-content active">
+                <p>Hello! My name is Abdulelah Mashari Alankari. I'm a 28-year-old IT professional based in Riyadh, Saudi Arabia. I graduated with a bachelor's degree in Information Management from Imam Muhammed bin Saud University.</p>
+                <p>I have experience working as a Programmer at the Ministry of National Guard Health Affairs and previously as an IT Support Specialist at Foods Gate Company. I am passionate about web development, API integration, and database management.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="section-content">
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Application & Web Development Specialist</h4>
+                            <h6><a href="https://lebara.sa/en/about-us">Lebara Mobile</a></h6>
+                            <span>June 2024 - Present</span><br>
+                            <span>Responsible for developing and maintaining .NET applications, API integration, and database management.</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Software Developer</h4>
+                            <h6><a href="https://www.ngha.med.sa/English/AboutNGHA/Pages/default.aspx">Ministry of National Guard Health Affairs</a></h6>
+                            <span>September 2022 - June 2024</span><br>
+                            <span>Responsible for developing and maintaining .NET applications, API integration, and database management.</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Programmer (Subcontract)</h4>
+                            <h6><a href="https://www.ngha.med.sa/English/AboutNGHA/Pages/default.aspx">Ministry of National Guard Health Affairs</a></h6>
+                            <span>July 2021 - September 2022</span><br>
+                            <span>Responsible for developing and maintaining .NET applications, API integration, and database management.</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>IT Support Specialist</h4>
+                            <h6><a href="https://foodsgate.sa/en/About">Foods Gate Company</a></h6>
+                            <span>February 2021 - July 2021</span><br>
+                            <span>Provided technical support and troubleshooting for IT systems and software applications.</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>IT Support COOP Intern</h4>
+                            <h6><a href="https://gaca.gov.sa/web/en-gb/page/gaca-profile-objectives-mision-andvision">General Authority of Civil Aviation</a></h6>
+                            <span>May 2020 - July 2020</span><br>
+                            <span>Provided technical support and troubleshooting for IT systems and software applications.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="courses">
+        <div class="container">
+            <h2>Courses</h2>
+            <div class="section-content">
+                <p>Throughout my career and education, I have taken several courses to enhance my skills:</p>
+                <ul>
+                    <li>Advanced .NET Programming</li>
+                    <li>Web Development with ASP.NET Core</li>
+                    <li>Database Management Systems</li>
+                    <li>API Integration and Development</li>
+                    <li>IT Support and Troubleshooting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="bachelor">
+        <div class="container">
+            <h2>Academic Study</h2>
+            <div class="section-content">
+                <p>I graduated with a Bachelor's degree in Information Management from Imam Muhammed bin Saud University. My coursework included:</p>
+                <ul>
+                    <li>Information Systems</li>
+                    <li>Database Management</li>
+                    <li>Software Engineering</li>
+                    <li>Network Security</li>
+                    <li>Project Management</li>
+                </ul>
+                <p>During my studies, I completed various projects, including a capstone project on developing a web-based information management system.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Email: <a href="mailto:AbdulelahAng@gmail.com">AbdulelahAng@gmail.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/Abdulelah-Alankari">Abdulelah Mashari Alankari</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Abdulelah Mashari Alankari All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sectionHeaders = document.querySelectorAll('.section h2');
+
+            sectionHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    const sectionContent = this.nextElementSibling;
+
+                    // Toggle 'active' class on section content
+                    sectionContent.classList.toggle('active');
+
+                    // Adjust height to auto when expanded for smooth transition
+                    // if (sectionContent.classList.contains('active')) {
+                    //     sectionContent.style.height = sectionContent.scrollHeight + 'px';
+                    // } else {
+                    //     sectionContent.style.height = '0';
+                    // }
+                });
+            });
+
+            const yearSpan = document.getElementById('current-year');
+            yearSpan.textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
