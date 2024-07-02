@@ -34,7 +34,7 @@
             background-color: #007bff;
             color: #fff;
             text-align: center;
-            padding: 70px 20px;
+            padding: 90px 20px;
             margin-bottom: 0;
         }
         .jumbotron h1 {
@@ -46,7 +46,7 @@
             margin-bottom: 30px;
         }
         .section {
-            padding: 20px 0;
+            padding: 30px 0;
             background-color: #fff;
             border-bottom: 1px solid #ddd;
             position: relative;
@@ -333,7 +333,7 @@
                     const sectionContent = this.nextElementSibling;
 
                     // Toggle 'active' class on section content
-                    sectionContent.classList.toggle('active');
+                    const isActive = sectionContent.classList.toggle('active');
 
                     // Adjust height to auto when expanded for smooth transition
                     // if (sectionContent.classList.contains('active')) {
@@ -341,6 +341,15 @@
                     // } else {
                     //     sectionContent.style.height = '0';
                     // }
+
+                    // Scroll to the middle of the section content only when expanding
+                    if (isActive) {
+                        const offset = sectionContent.getBoundingClientRect().top + window.pageYOffset - (window.innerHeight / 2);
+                        window.scrollTo({
+                            top: offset,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
 
