@@ -4,8 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
             sectionHeaders.forEach(header => {
                 header.addEventListener('click', function () {
                     const sectionContent = this.nextElementSibling;
-
-                    // Toggle 'active' class on section content
                     const isActive = sectionContent.classList.toggle('active');
 
                     // Adjust height to auto when expanded for smooth transition

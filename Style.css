@@ -106,19 +106,6 @@ a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #007bff;
 }
-/* .btn:active, .btn:focus {
-    outline: none;
-    background-color: #007bff;
-} */
-/* .btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-} */
 
 .timeline {
     position: relative;
@@ -183,14 +170,11 @@ a {
     width: 100%;
     margin: 0;
     color: #212529;
-    /* border-collapse: separate; */
     border-collapse: collapse;
-    /* border-spacing: 0; */
 }
 .table th, .table td {
     vertical-align: middle;
     text-align: center;
-    /* padding: 0.75rem; */
     padding: 1rem;
     border: 1px solid #dee2e6;
     word-wrap: break-word;
