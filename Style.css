@@ -24,6 +24,11 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+a {
+    color: var(--bs-secondary-color)!important;
+}
+
 .jumbotron {
     background-color: #007bff;
     color: #fff;
@@ -39,6 +44,7 @@ body {
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
+
 .section {
     padding: 30px 0;
     background-color: #fff;
@@ -77,6 +83,27 @@ body {
     height: auto;
     transition: height 0.5s ease-in;
 }
+
+.cv-button {
+    margin-top: 20px;
+    text-align: center;
+}
+.cv-button .btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: #fff !important;
+    border: none;
+    background-color: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+.cv-button .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -122,10 +149,6 @@ body {
 }
 .timeline-content a:hover {
     text-decoration: underline;
-}
-
-a {
-    color: var(--bs-secondary-color)!important;
 }
 
 .table-responsive {
@@ -216,6 +239,15 @@ footer p {
 }
 .section-content {
     font-size: 0.6rem;
+}
+
+.cv-button {
+    margin-top: 15px;
+}
+
+.cv-button .btn {
+    padding: 5px 5px;
+    font-size: 10px;
 }
 
 .table-wrapper {
