@@ -222,6 +222,7 @@ footer p {
     width: 100%;
     overflow-x: auto;
     border-radius: 2px;
+    box-shadow: none;
 }
 .table {
     display: block;
