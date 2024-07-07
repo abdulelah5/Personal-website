@@ -153,6 +153,10 @@ a {
 .timeline-content a:hover {
     text-decoration: underline;
 }
+.important {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
 
 .table-responsive {
     margin-top: 20px;
@@ -256,6 +260,9 @@ footer p {
 }
 .timeline-content {
     padding: 10px;
+    word-break: normal;
+    hyphens: auto;
+    white-space: normal;
 }
 .timeline-content h4{
     font-size: 0.9rem;
@@ -265,10 +272,10 @@ footer p {
 }
 .timeline-content span{
     font-size: 0.6rem;
-    word-break: normal;
-    hyphens: auto;
-    white-space: normal;
 }
+.important {
+    font-size: 0.45rem;
+  }
 
 .table-wrapper {
     width: 100%;
