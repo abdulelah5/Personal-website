@@ -253,14 +253,21 @@ footer p {
 .timeline-item {
     padding-left: 10px;
 }
+.timeline-dot {
+    width: 15px;
+    height: 15px;
+}
 .timeline-content {
     padding: 10px;
 }
 .timeline-content h4{
-    font-size: 0.93rem;
+    font-size: 0.9rem;
 }
 .timeline-content a{
     font-size: 0.75rem;
+}
+.timeline-content span{
+    font-size: 0.6rem;
 }
 
 .table-wrapper {
