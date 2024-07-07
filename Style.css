@@ -250,6 +250,19 @@ footer p {
     font-size: 10px;
 }
 
+.timeline-item {
+    padding-left: 7px;
+}
+.timeline-content {
+    padding: 10px;
+}
+.timeline-content h4{
+    font-size: 0.93rem;
+}
+.timeline-content a{
+    font-size: 0.75rem;
+}
+
 .table-wrapper {
     width: 100%;
     overflow-x: auto;
