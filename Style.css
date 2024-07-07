@@ -265,6 +265,9 @@ footer p {
 }
 .timeline-content span{
     font-size: 0.6rem;
+    word-break: normal;
+    hyphens: auto;
+    white-space: normal;
 }
 
 .table-wrapper {
