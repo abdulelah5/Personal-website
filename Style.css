@@ -153,6 +153,10 @@ a {
 .timeline-content a:hover {
     text-decoration: underline;
 }
+.important {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
 
 .table-responsive {
     margin-top: 20px;
@@ -234,9 +238,6 @@ footer p {
 .section h4 {
     font-size: 1rem;
     }
-.section a {
-    font-size: 0.8rem;
-}
 .section-content {
     font-size: 0.6rem;
 }
@@ -249,6 +250,32 @@ footer p {
     padding: 10px 10px;
     font-size: 10px;
 }
+
+.timeline-item {
+    padding-left: 10px;
+}
+.timeline-dot {
+    width: 15px;
+    height: 15px;
+}
+.timeline-content {
+    padding: 10px;
+    word-break: normal;
+    hyphens: auto;
+    white-space: normal;
+}
+.timeline-content h4{
+    font-size: 0.9rem;
+}
+.timeline-content a{
+    font-size: 0.75rem;
+}
+.timeline-content span{
+    font-size: 0.6rem;
+}
+.important {
+    font-size: 0.45rem;
+  }
 
 .table-wrapper {
     width: 100%;
